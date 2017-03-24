@@ -43,7 +43,9 @@ public class M {
         try {
             sc = new Scanner(nomFich);
            while(sc.hasNext())
-                System.out.println(sc.next());
+           for(int i=0;sc.hasNext()==false;i++){
+               //notas.get(i).setNome();
+           }
         } catch (Exception ex) {
             System.out.print("error" + ex.getMessage());
         } finally {
