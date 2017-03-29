@@ -16,10 +16,11 @@ public class F {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Alumnos z = new Alumnos("fran",5);
+//        Alumnos z = new Alumnos("fran",5);
         String fichero = "notas.dat";
         M a = new M();
-        a.Añad(fichero, z);
+//        a.Añad(fichero, z);
+        a.leer(fichero);
      }
     
 }

@@ -42,7 +42,7 @@ public class Alumnos implements Serializable {
 
     @Override
     public String toString() {
-        return "Alumnos{" + "nome=" + nome + ", nota=" + nota + '}';
+        return  nome + "," + nota ;
     }
 
     @Override

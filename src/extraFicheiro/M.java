@@ -29,6 +29,7 @@ public class M {
             fichero = new File(nomFich);
             fch = new PrintWriter(fichero);
             for (int i = 0; i < notas.size(); i++) {
+                notas.set(i, x);
                 fch.println(notas.get(i));
             }
         }catch(Exception ex){
@@ -39,13 +40,17 @@ public class M {
     }
     
     public void leer(String nomFich){
-
+        String linea;
+        String mtrz[];
         try {
-            sc = new Scanner(nomFich);
-           while(sc.hasNext())
-           for(int i=0;sc.hasNext()==false;i++){
-               //notas.get(i).setNome();
-           }
+            sc = new Scanner(new File(nomFich));
+           while(sc.hasNextLine()){
+               linea = sc.nextLine();
+               mtrz=linea.split(",");
+               if(Integer.parseInt(mtrz[1])>=5){
+               ap.add(new Alumnos(mtrz[0],Integer.parseInt(mtrz[1])));
+               }
+        }  
         } catch (Exception ex) {
             System.out.print("error" + ex.getMessage());
         } finally {
