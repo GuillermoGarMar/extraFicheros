@@ -19,7 +19,8 @@ public class F {
 //        Alumnos z = new Alumnos("fran",5);
         String fichero = "notas.dat";
         M a = new M();
-//        a.Añad(fichero, z);
+        a.init();
+        a.Añad(fichero);
         a.leer(fichero);
      }
     
